@@ -1,5 +1,14 @@
 const cl = console.log;
 
+const setzero =(num)=>{
+    if(num<10){
+        return "0" + num;
+    }else{
+        return num
+    }
+}
+
+
 const digitalclockhandler = () =>{
 
 let d1 =new Date("15-mar-2026").getTime();
@@ -17,7 +26,7 @@ cl(min);
 let sec = Math.floor(diff%(1000*60)/(1000));
 cl(sec)
 
-let result = `${days}days:${hr}hr:${min}min:${sec}sec`;
+let result = `${setzero(days)}days:${setzero(hr)}hr:${setzero(min)}min:${setzero(sec)}sec`;
 document.getElementById("digitalclock").innerHTML=result;
 }
 
